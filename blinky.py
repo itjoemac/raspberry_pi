@@ -22,6 +22,7 @@ while choice != 'Q':
     print("Which LED Would you like to turn on?\n")
     print("Press 'R' for red, 'G' for green, 'Y' for yellow.\nPress 'Q' to quit.\n")
     choice = input("Your selection?\nColor: ")
+    choice = choice.upper()
     setup()
     if choice == 'G':
         GPIO.output(ledPinG, GPIO.HIGH)

@@ -8,6 +8,7 @@ ledPinR = 11    # Red LED
 ledPinG = 32    # Green LED
 
 def setup():
+    GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BOARD)       # use PHYSICAL GPIO Numbering
     GPIO.setup(ledPinY, GPIO.OUT)   # set the ledPin to OUTPUT mode
     GPIO.output(ledPinY, GPIO.LOW)  # make ledPin output LOW level
@@ -42,4 +43,3 @@ while choice != 'Q':
     else:
         print("Goodbye")
         break
-

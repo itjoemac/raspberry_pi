@@ -85,7 +85,7 @@ while choice != 'Q':
         while lightoff != 'S':
             lightg_init()
             GPIO.output(ledPinG, GPIO.HIGH)
-            lightoff = ("You're available, press 'S' then 'Enter' to stop.")
+            lightoff = input("You're available, press 'S' then 'Enter' to stop.")
             lightoff = lightoff.upper()
             GPIO.output(ledPinG, GPIO.LOW)
         continue
@@ -93,7 +93,7 @@ while choice != 'Q':
         while lightoff != 'S':
             lightr_init()
             GPIO.output(ledPinR, GPIO.HIGH)
-            lightoff = raw_input("You're on a conference call, press 'S' then 'Enter' to stop.")
+            lightoff = input("You're on a conference call, press 'S' then 'Enter' to stop.")
             lightoff = lightoff.upper()
             GPIO.output(ledPinR, GPIO.LOW) 
         continue
@@ -101,7 +101,7 @@ while choice != 'Q':
         while lightoff != 'S':
             lighty_init()
             GPIO.output(ledPinY, GPIO.HIGH)
-            lightoff = raw_input("You have headphones on, press 'S' then 'Enter' to stop.")
+            lightoff = input("You have headphones on, press 'S' then 'Enter' to stop.")
             lightoff = lightoff.upper()
             GPIO.output(ledPinY, GPIO.LOW)  
         continue
